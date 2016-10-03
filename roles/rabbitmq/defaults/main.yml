@@ -4,6 +4,8 @@ rabbitmq_server: localhost
 rabbitmq_interface:
   - 127.0.0.1
   - ::1
+  - "{{ ansible_default_ipv4.address }}"
+  - "{{ ansible_default_ipv6.address }}"
 
 rabbitmq_service_name: rabbitmq-server
 rabbitmq_package_name: rabbitmq-server
